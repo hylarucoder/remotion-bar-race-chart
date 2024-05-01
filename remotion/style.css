@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.typo {
+
+    h1 {
+        @apply text-9xl;
+        line-height: 1.3em;
+    }
+
+    h2 {
+        @apply text-8xl;
+    }
+
+    h3 {
+        @apply text-7xl;
+    }
+
+    h4 {
+        @apply text-6xl;
+    }
+
+    h5 {
+        @apply text-5xl;
+    }
+
+    h6 {
+        @apply text-4xl;
+    }
+
+    p {
+        @apply text-5xl;
+    }
+
+    p code {
+        @apply bg-zinc-600 text-white;
+    }
+
+    li code {
+        @apply bg-zinc-600 text-white;
+    }
+
+    ul code {
+        @apply bg-zinc-600 text-white;
+    }
+
+    ul, ol {
+        list-style: none;
+        padding-left: 0;
+        @apply py-[20px];
+    }
+
+    ul li, ol li {
+        @apply text-zinc-800;
+        position: relative;
+        padding-left: 1.3rem; /* 或者根据需要调整 */
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    ul li::before, ol li::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: inherit;
+    }
+
+    ul li::before {
+        content: '-';
+        margin-left: -5px;
+    }
+
+    ol li::before {
+        content: counter(item) '.';
+        counter-increment: item;
+        margin-left: -20px;
+    }
+
+    ol {
+        counter-reset: item;
+    }
+
+    ul {
+        li {
+            @apply text-zinc-700;
+            line-height: 1.3em;
+        }
+
+        strong {
+            @apply text-zinc-800 text-5xl;
+        }
+
+        @apply text-zinc-800 text-4xl;
+    }
+
+    ol {
+        li {
+            @apply text-zinc-700;
+            line-height: 1.3em;
+        }
+
+        strong {
+            @apply text-zinc-800 text-5xl;
+        }
+
+        @apply text-zinc-800 text-4xl;
+    }
+
+    @apply text-zinc-800 text-5xl;
+}
+
+
+
